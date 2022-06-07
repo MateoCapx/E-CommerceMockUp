@@ -5,15 +5,16 @@
     <head>
         <title>Sneaker Hub</title>
         <link href="style.css" type="text/css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/64e6a03114.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
 
       <!-- Start header/Nav content -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light " style=" background-color: #9D7A52">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SneakerHub</a>
+          <a class="navbar-brand" style="color: white;" href="#">SneakerHub</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -22,18 +23,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" style="color: white;" href="#">Home</a>
               </li>
 
-
+            <!-- 
               <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <a class="nav-link" style="color: white;" href="#">Shop</a>
               </li>
-              
+               -->
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                  Shop
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">Men's Collection </a></li>
@@ -46,7 +47,7 @@
 
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <i class="fa-solid fa-cart-shopping"></i>
             </form>
           </div>
         </div>
@@ -71,11 +72,13 @@
      <div class="container">
             <div class="row">
               <div class="col-md-6">
-                <img src="Mens.jpg" alt="MainPhoto" width="100%">
+                  <h2> Mens Collection </h2>
+                <img src="Mens.jpg" alt="Mens Collection Photo" width="100%" >
               </div>
 
               <div class="col-md-6">
-                <img src="Womans.jpg" alt="MainPhoto" width="100%">
+                <h2> Womans Collection </h2>
+                <img src="Womans.jpg" alt="Womans Collection Photo" style="height: 425px;" width="100%">
               </div>
             </div>
           </div>
@@ -84,19 +87,42 @@
         
 
 
- <!-- Start Sale content Section -->
+ <!--  Sale content Section -->
         <section id="featured">
            <div id="saleSection">
 
-            <h2> Final Sale 40%-60%</h2>
+            <div id="saleBox">
+                 <h2> Final Sale 40%-60%</h2>
             <button id="finalSaleBtn"> SHOP SALE </button>
-          
+            </div>
+           
+
+            <br>
+            <br>
+            <br>
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm-4">
+                    <img src="Sale1.jpg" alt="Sale Collection Photo" style="height: 280px;" width="100%">
+                  </div>
+
+                  <div class="col-sm-4">
+                    <img src="Sale2.jpg" alt="Sale Collection Photo"  width="100%">
+
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="Sale3.jpg" alt="Sale Collection Photo" width="100%">
+
+                  </div>
+                </div>
            </div>
 
         </section>
       
        
-        
+       
+
 
 
 
