@@ -31,6 +31,21 @@ padding-top: 80px;
 }
 
 
+/* Styles for Shop Now Button */
+#shopNowBtn{
+    cursor: pointer;
+}
+
+
+/* styles for shopping cart icon */
+.fa-solid {
+ margin-top: 20px;
+ cursor: pointer;
+}
+
+
+
+
 /* Footer Section */
 footer{
     background: #946F43; /*  Website Theme Color */
