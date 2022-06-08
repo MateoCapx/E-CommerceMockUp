@@ -47,7 +47,20 @@
 
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <i class="fa-solid fa-cart-shopping fa-xl"></i>
+          
+              <i class="fa-solid fa-cart-shopping fa-xl" onclick="openNav()" id="mySidebar" ></i>
+          
+      <!-- Shopping cart - Side bar    populate dyanmically with javascript array -->
+      <div id="mySidebar" class="sidebar">
+        <a href="" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+      </div>
+
+
+
             </form>
           </div>
         </div>
