@@ -24,36 +24,4 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }
 
-console.log("heyy")
 
-// API Function
-async function shoeApi() {
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Host': 'shoes-collections.p.rapidapi.com',
-            'X-RapidAPI-Key': 'e5eb4ef180mshbf601c540e61cb2p1b592bjsnf529ab523414'
-        }
-    };
-
-    fetch('https://shoes-collections.p.rapidapi.com/shoes', options)
-        .then(response => response.json())
-        .then((data) => {
-           
-            console.log(hey)
-
-
-
-          })
-        .catch(err => console.error(err));
-
-  
-}
-shoeApi();
-
-
-
-// function displayApiInfo(data){
-//  console.log(data[0].image);
-
-// }
