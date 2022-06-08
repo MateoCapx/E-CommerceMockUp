@@ -24,7 +24,7 @@ function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
 }
 
-
+console.log("heyy")
 
 // API Function
 async function shoeApi() {
@@ -40,7 +40,7 @@ async function shoeApi() {
         .then(response => response.json())
         .then((data) => {
            
-            displayApiInfo()
+            console.log(hey)
 
 
 
@@ -53,7 +53,7 @@ shoeApi();
 
 
 
-function displayApiInfo(data){
- console.log(data[0].image);
+// function displayApiInfo(data){
+//  console.log(data[0].image);
 
-}
+// }
