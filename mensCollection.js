@@ -44,7 +44,8 @@ for (let i = 0; i < data.length; i++) {
 
     //getting the info from api and displaying it to page
     productName.textContent = data[i].name;
-    shoePrice.textContent = data[i].price;
+    shoePrice.textContent =  "$" +  data[i].price;  // -- Concatenated $ to Shoe Price
+    
     
     // Appending all elements to webpage
     cardEl.append(shoeImageEl,productName,shoePrice )

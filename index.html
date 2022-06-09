@@ -45,59 +45,74 @@
             </ul>
 
 
+      
+
+            <!-- onclick="openNav()" id="mySidebar" class="openbtn"  --- Code for Side bar functionality -->
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          
-              <i class="fa-solid fa-cart-shopping fa-xl" onclick="openNav()" id="mySidebar" ></i>
-          
+              <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            </form>
+
+
+
       <!-- Shopping cart - Side bar    populate dyanmically with javascript array -->
-      <div id="mySidebar" class="sidebar">
+      <!-- <div id="mySidebar" class="sidebar">
         <a href="" class="closebtn" onclick="closeNav()">×</a>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Clients</a>
             <a href="#">Contact</a>
+      </div> -->
+
       </div>
-
-
-
-            </form>
-          </div>
         </div>
       </nav>
 
+           
+          
 
 
         <!-- Start homepage content -->
-        
+    <div class="wrapper">
         <div id="main-banner">
             <img src="Shoe2.jpg" alt="MainPhoto" width="100%">
+           
             <div class="centered"> 
                 <h1> Awesome Sneakers</h1>
                 <button id="shopNowBtn" href="MensCollection.html"> SHOP NOW </button>
             </div>
-        </div>
- <br>
- <br>
+        </div> 
+    </div>
 
  
- <section id="men&womanSection">
-     <div class="container">
+ <section id="genderSection">
             <div class="row">
               <div class="col-md-6">
-                  <h2> Mens Collection </h2>
-                <img src="Mens.jpg" alt="Mens Collection Photo" width="100%" >
+
+                 <div class="content-wrapper">
+                    <img src="Mens.jpg" alt="Mens Collection Photo" width="100%" > 
+                 </div>
+
+                <div class="text-wrapper">
+                     <h2> Mens Collection </h2>
+                </div>
               </div>
 
-              <div class="col-md-6">
-                <h2> Womans Collection </h2>
-                <img src="Womans.jpg" alt="Womans Collection Photo" style="height: 425px;" width="100%">
-              </div>
+              <div class="col-md-6"> 
+                <div class="content-wrapper1">
+                <img src="Womans.jpg" alt="Womans Collection Photo"style="height: 425px;" > 
+             </div>
+            <div class="text-wrapper">
+                 <h2> Womans Collection </h2>
             </div>
-          </div>
-
+            </div>
+        </div>
  </section>
-        
+<br>
+<br>
+<br>
+<br>
+
 
 
  <!--  Sale content Section -->
