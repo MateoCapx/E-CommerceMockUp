@@ -1,3 +1,12 @@
+let cart =[]; // The array that all of the products will be stored in. 
+
+
+// Grabbing the Shopping Cart icon
+let shoppingCartIcon = document.querySelector(".fa-solid")
+shoppingCartIcon.addEventListener('click',function(){
+    window.location.href = "shoppingCart.html"
+})
+
 let shoeListAppened = document.querySelector("#shoeList");
 
 // API Function
@@ -15,6 +24,7 @@ async function shoeApi() {
         .then((data) => {
            console.log(data)
            displayApiInfo(data)
+           
         })
         .catch(err => console.error(err));
 
@@ -27,15 +37,18 @@ shoeApi();
 function displayApiInfo(data){
 
 for (let i = 0; i < data.length; i++) {
-    console.log( data[i])
+    // console.log( data[i])
         //Displaying Image
       let shoeImageEl = document.createElement("img");
     shoeImageEl.setAttribute("src", data[i].image);
-    shoeImageEl.classList = "img-thumbnail";
+    shoeImageEl.classList = "img-thumbnail  ";
+   
+    let modalButtonEl = document.createElement("button");  // Button that displays modal when clicked
+    modalButtonEl.innerHTML = "Add to Cart "
 
     //Creating Div to hold Photo, Product name & Shoe Price
     let cardEl = document.createElement("div");
-    cardEl.classList = "col-5";
+    cardEl.classList = "col-5 ";
     
     //Creating elements for Product Name & Shoe price 
     let productName = document.createElement("span");
@@ -47,8 +60,9 @@ for (let i = 0; i < data.length; i++) {
     shoePrice.textContent =  "$" +  data[i].price;  // -- Concatenated $ to Shoe Price
     
     
+    
     // Appending all elements to webpage
-    cardEl.append(shoeImageEl,productName,shoePrice )
+    cardEl.append(shoeImageEl,productName,shoePrice,modalButtonEl)
     shoeListAppened.append(cardEl)
 
 
@@ -58,11 +72,12 @@ for (let i = 0; i < data.length; i++) {
 }
 
 
+function createsProductLayout(data, hover){
+
+    let products = data[i];
+    console.log(products)
 
 
-// function createsProductLayout(data){
 
     
-
-    
-// }
+}       

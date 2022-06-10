@@ -22,13 +22,42 @@
 
 #saleSection{
 text-align: center;
-padding-top: 80px;
+
 }
 
 #saleBox{
     background-color: #946F43;
-    
 }
+
+
+/* Styles for parallax */
+.parallax{
+background-image: url('Shoe2.jpg');
+ /* Set a specific height */
+ min-height: 700px;
+
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.parallax1{
+    background-image: url('parellex.jpg');
+     /* Set a specific height */
+     min-height: 500px;
+    
+     /* Create the parallax scrolling effect */
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+
+
+
+
 
 
 /* Styles for Shop Now Button */
@@ -46,6 +75,7 @@ padding-top: 80px;
 
 #genderSection{
     margin: 0%;
+  
 }
 
 
@@ -122,6 +152,32 @@ footer a{
     color: #eee;
     text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* If i would like a side shopping cart side bar to show  */
