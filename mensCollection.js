@@ -36,7 +36,6 @@ shoeApi();
 // iterating through API Information/ Displaying shoes onto webpage
 function displayApiInfo(data){
 
-    
 for (let i = 0; i < data.length; i++) {
     // console.log( data[i])
         //Displaying Image
@@ -45,11 +44,12 @@ for (let i = 0; i < data.length; i++) {
     shoeImageEl.classList = "img-thumbnail  ";
    
     let modalButtonEl = document.createElement("button");  // Button that displays modal when clicked
+    modalButtonEl.classList ="col-6 mx-auto  btn btn-outline-danger "
     modalButtonEl.innerHTML = "Add to Cart"
 
     //Creating Div to hold Photo, Product name & Shoe Price
     let cardEl = document.createElement("div");
-    cardEl.classList = "col-5 ";
+    cardEl.classList = "col-5 gy-5 ";
     
     //Creating elements for Product Name & Shoe price 
     let productName = document.createElement("span");
@@ -66,19 +66,24 @@ for (let i = 0; i < data.length; i++) {
 
 
     // Button that adds indivdual items to shopping cart
-    modalButtonEl.addEventListener("click", function(){
+    modalButtonEl.addEventListener("click", function(e){
+        e.preventDefault();
           let addCart = cart.push(data[i]) // Push items clicked into array
           localStorage.setItem("Product", JSON.stringify(cart))
         console.log(cart)
+    // navigatingToShopingCartPage()
     })
-
+ 
 }
 
 }
 
-function displayCartItems(){
-   
+function navigatingToShopingCartPage() {
+window.location.href = "shoppingCart.html"
+console.log("cart")
 
-}
+ }
 
-displayCartItems()
+
+
+
