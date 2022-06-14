@@ -1,4 +1,5 @@
-let cart =[]; // The array that all of the products will be stored in. 
+const localStorageData = JSON.parse(localStorage.getItem("Product"))
+let cart = localStorageData || []; // Checking to see if local storage has anything in local storage if not it'll be an empty array
 let shoeListAppened = document.querySelector("#shoeList");
 
 // Grabbing the Shopping Cart icon
@@ -41,9 +42,10 @@ for (let i = 0; i < data.length; i++) {
         //Displaying Image
       let shoeImageEl = document.createElement("img");
     shoeImageEl.setAttribute("src", data[i].image);
-    shoeImageEl.classList = "img-thumbnail  ";
-   
-    let modalButtonEl = document.createElement("button");  // Button that displays modal when clicked
+    shoeImageEl.classList = "img-thumbnail";
+
+   // Button that Adds items to shopping cart
+    let modalButtonEl = document.createElement("button");  
     modalButtonEl.classList ="col-6 mx-auto  btn btn-outline-danger "
     modalButtonEl.innerHTML = "Add to Cart"
 
@@ -66,23 +68,26 @@ for (let i = 0; i < data.length; i++) {
 
 
     // Button that adds indivdual items to shopping cart
-    modalButtonEl.addEventListener("click", function(e){
-        e.preventDefault();
+    modalButtonEl.addEventListener("click", function(){
+        
           let addCart = cart.push(data[i]) // Push items clicked into array
           localStorage.setItem("Product", JSON.stringify(cart))
         console.log(cart)
-    // navigatingToShopingCartPage()
+  
+            let icon = document.querySelector(".fa-solid ")
+            for (let i = 0; i < cart.length; i++) {
+                let cartVaule = document.createElement("span");
+                cartVaule.classList = "fa-solid fa-circle-1"
+                icon.append(cartVaule)
+                
+            }
+
     })
  
 }
 
 }
 
-function navigatingToShopingCartPage() {
-window.location.href = "shoppingCart.html"
-console.log("cart")
-
- }
 
 
 
