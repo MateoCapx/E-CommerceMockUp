@@ -20,11 +20,14 @@ for (let i = 0; i < cart.length; i++) {
    
     let modalButtonEl = document.createElement("button");  // Button that displays modal when clicked
     modalButtonEl.classList ="col-6 mx-auto  btn btn-outline-danger "
-    modalButtonEl.innerHTML = "Add to Cart"
+    modalButtonEl.innerHTML = "Remove from Cart"
+
+    let quantitySelector = document.createElement("input")
+    quantitySelector.classList = "cart-quantity-input "
 
     //Creating Div to hold Photo, Product name & Shoe Price
     let cardEl = document.createElement("div");
-    cardEl.classList = "col-5 gy-5 ";
+    cardEl.classList = "col-3 gy-5 ";
     
     //Creating elements for Product Name & Shoe price 
     let productName = document.createElement("span");
@@ -36,18 +39,11 @@ for (let i = 0; i < cart.length; i++) {
     shoePrice.textContent =  "$" +  cart[i].price;  // -- Concatenated $ to Shoe Price
     
     // Appending all elements to webpage
-    cardEl.append(shoeImageEl,productName,shoePrice,modalButtonEl)
+    cardEl.append(shoeImageEl,productName,shoePrice,modalButtonEl,quantitySelector)
     shoeListAppened.append(cardEl)
 
 
-    // Button that adds indivdual items to shopping cart
-    modalButtonEl.addEventListener("click", function(){
-          let addCart = cart.push(cart[i]) // Push items clicked into array
-          localStorage.setItem("Product", JSON.stringify(cart))
-        console.log(cart)
-
-       
-    })
+  
 
 }
 
